@@ -1,10 +1,10 @@
-import logo from './logo.svg'
-import './App.css'
+import "./App.css"
+import Sudoku from "./components/Sudoku"
 
 function App() {
   return (
     <div className="wrapper">
-   
+      <Sudoku />
     </div>
   )
 }
