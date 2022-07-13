@@ -38,14 +38,13 @@ const isValid = (grid, guess, row, column) => {
 const solveSudoku = async (grid, setGrid) => {
   const { row, column } = findNextEmptyCell(grid)
   if (row === undefined && column === undefined) {
-    console.log(grid)
     return true
   }
 
   for (let guess = 1; guess <= 9; guess++) {
     if (isValid(grid, guess, row, column)) {
       grid[row][column] = guess
-      await animationDelay(20)
+      await animationDelay(10)
       setGrid([...grid])
 
       if (await solveSudoku(grid, setGrid)) {
@@ -54,8 +53,8 @@ const solveSudoku = async (grid, setGrid) => {
     }
 
     grid[row][column] = 0
+    await animationDelay(10)
     setGrid([...grid])
-    await animationDelay(20)
   }
 
   return false
