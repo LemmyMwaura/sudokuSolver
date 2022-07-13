@@ -147,16 +147,26 @@ td:nth-child(7) {
   width: 50%;
   border-radius: 0.3rem;
   background: linear-gradient(135deg, #00bec7, #0073e8);
-  /* background: linear-gradient(135deg, #fcbd4a, #d48b02); */
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled{
+  background: linear-gradient(135deg, #fcbd4a, #d48b02);
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.btn:disabled:active{
+  transform: scale(1);
 }
 
 .btn-restart {
   background: linear-gradient(115deg, #ff79aa, #b743ff);
 }
 
-.btn:active {
-  transform: scale(0.97);
-}
 
 @media screen and (max-width: 1000px) {
   .sudoku-grid {
@@ -186,7 +196,7 @@ td:nth-child(7) {
     width: 350px;
     justify-self: center;
   }
-  .sudoku-title{
+  .sudoku-title {
     width: 21rem;
   }
   .left-wrapper {
@@ -204,10 +214,10 @@ td:nth-child(7) {
 }
 
 @media screen and (max-width: 445px) {
-  .sudoku-grid{
+  .sudoku-grid {
     padding: 1rem;
   }
-  .sudoku-title{
+  .sudoku-title {
     width: 18rem;
   }
   table {

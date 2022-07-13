@@ -1,11 +1,8 @@
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { solveSudoku } from "./sudokuSolver"
 import image from "../assets/images/sudoku.png"
 
 const Sudoku = () => {
-  const tableRef = useRef(null)
-  const leftSideRef = useRef(null)
-
   const puzzle = [
     [3, 9, 0, 0, 5, 0, 0, 0, 0],
     [0, 0, 0, 2, 0, 0, 0, 0, 5],
@@ -19,7 +16,13 @@ const Sudoku = () => {
   ]
 
   const [grid, setGrid] = useState(puzzle)
+  const [disabled, setDisabled] = useState(false)
   const array = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+  const startSolve = () => {
+    setDisabled(true)
+    solveSudoku(grid, setGrid, setDisabled)
+  }
 
   return (
     <div className="sudoku-grid">
@@ -27,7 +30,7 @@ const Sudoku = () => {
         <img className="sudoku-title" src={image} alt="sudoku-title-image" />
       </div>
       <div className="left-wrapper">
-        <div className="left" ref={leftSideRef}>
+        <div className="left">
           <h4>Sudoku Visualiser</h4>
           <h5>HOW IT WORKS</h5>
           <div className="info">
@@ -51,20 +54,22 @@ const Sudoku = () => {
           <div className="btns">
             <button
               className="btn btn-solve"
-              onClick={() => solveSudoku(grid, setGrid)}
+              onClick={() => startSolve()}
+              disabled={disabled}
             >
               Solve
             </button>
             <button
               className="btn btn-restart"
-              onClick={() => solveSudoku(grid, setGrid)}
+              onClick={() => setGrid(puzzle)}
+              disabled={disabled}
             >
               RESTART
             </button>
           </div>
         </div>
 
-        <table ref={tableRef}>
+        <table>
           <tbody>
             {array.map((row, rowIndex) => (
               <tr key={rowIndex}>

@@ -35,9 +35,10 @@ const isValid = (grid, guess, row, column) => {
   return true
 }
 
-const solveSudoku = async (grid, setGrid) => {
+const solveSudoku = async (grid, setGrid, setDisabled) => {
   const { row, column } = findNextEmptyCell(grid)
   if (row === undefined && column === undefined) {
+    setDisabled(false)
     return true
   }
 
@@ -47,7 +48,7 @@ const solveSudoku = async (grid, setGrid) => {
       await animationDelay(10)
       setGrid([...grid])
 
-      if (await solveSudoku(grid, setGrid)) {
+      if (await solveSudoku(grid, setGrid, setDisabled)) {
         return true
       }
     }
