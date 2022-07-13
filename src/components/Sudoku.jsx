@@ -1,16 +1,10 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { solveSudoku } from "./sudokuSolver"
 import image from "../assets/images/sudoku.png"
 
 const Sudoku = () => {
   const tableRef = useRef(null)
   const leftSideRef = useRef(null)
-
-  useEffect(() => {
-    const { width, height } = tableRef.current.getBoundingClientRect()
-    leftSideRef.current.style.maxWidth = `${width}px`
-    leftSideRef.current.style.maxHeight = `${height}px`
-  }, [tableRef])
 
   const puzzle = [
     [3, 9, 0, 0, 5, 0, 0, 0, 0],
@@ -34,21 +28,24 @@ const Sudoku = () => {
       </div>
       <div className="left-wrapper">
         <div className="left" ref={leftSideRef}>
-          <h4>Sudoku VIsualiser</h4>
+          <h4>Sudoku Visualiser</h4>
           <h5>HOW IT WORKS</h5>
           <div className="info">
             <div className="desc">
-              Using a Backtracking algorithm the sudoku is solved by one by one assigning numbers to empty
-              cells. Before assigning it check whether it is safe to
-              assign. i.e that the same number is not present in the current
-              row, current column and current 3X3 subgrid.
+              Using a <span>Backtracking algorithm</span> the sudoku is solved
+              by one by one assigning numbers to empty cells. Before assigning,
+              it check whether it is safe <span>(to assign)</span>. i.e that the
+              same number is not present in the current row, current column and
+              current 3X3 subgrid.
             </div>
             <div className="desc">
-              After checking for safety, assign the number, and recursively
-              check whether this assignment leads to a solution. If the
+              After checking for safety, assign the number, and
+              <span> recursively</span> check whether this assignment leads to a solution. If the
               assignment doesn’t lead to a solution, then try the next number
-              for the current empty cell. And if none of the numbers (1 to 9)
-              leads to a solution, return false and print no solution exists.
+              for the current empty cell. And if none of the numbers
+              <span> (1 to 9) </span>
+              leads to a solution, <span>return false </span> and print no
+              solution exists.
             </div>
           </div>
           <div className="btns">
