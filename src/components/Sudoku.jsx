@@ -57,14 +57,14 @@ const Sudoku = () => {
               onClick={() => startSolve()}
               disabled={disabled}
             >
-              Solve
+              SOLVE PUZZLE
             </button>
             <button
               className="btn btn-restart"
               onClick={() => setGrid(puzzle)}
               disabled={disabled}
             >
-              RESTART
+              CLEAR GRID
             </button>
           </div>
         </div>
