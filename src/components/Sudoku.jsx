@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { solveSudoku } from "./sudokuSolver";
-import image from '../assets/images/image.jpg';
+import { solveSudoku } from "./sudokuSolver"
+import image from "../assets/images/sudoku.png"
 
 const Sudoku = () => {
   const puzzle = [
@@ -20,7 +20,9 @@ const Sudoku = () => {
 
   return (
     <div className="sudoku-grid">
-      <img src={image} alt='title-image'/>
+      <div className="title">
+        <img className="sudoku-title" src={image} alt="sudoku-title-image" />
+      </div>
       <div className="wrapper">
         <div className="actions">
           <button
