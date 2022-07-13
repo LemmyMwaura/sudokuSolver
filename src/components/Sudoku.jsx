@@ -92,6 +92,10 @@ const Sudoku = () => {
           </tbody>
         </table>
       </div>
+      <div className="my-links">
+        <span>By</span>
+        <a href="https://github.com/LemmyMwaura" target="_blank">Lemmy Mwaura</a>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 .sudoku-grid {
   background: url("../assets/images/6880419.jpg");
+  position: relative;
   background-position: center;
   background-size: cover;
   object-fit: contain;
@@ -167,12 +168,34 @@ td:nth-child(7) {
   background: linear-gradient(115deg, #ff79aa, #b743ff);
 }
 
+.my-links{
+  position: absolute;
+  text-transform: uppercase;
+  display: flex;
+  bottom: 1%;
+  right: 2%;
+  gap: 10px;
+}
+
+.my-links span{
+  font-family: 'Syne', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color:rgb(250, 213, 2);
+}
+
+.my-links a{
+  font-size: 0.7rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  color:rgb(250, 213, 2);
+}
 
 @media screen and (max-width: 1000px) {
   .sudoku-grid {
     padding: 2rem;
-    padding-bottom: 4rem;
     min-height: none;
+    padding-bottom: 4rem;
   }
 
   .left-wrapper {
@@ -216,6 +239,7 @@ td:nth-child(7) {
 @media screen and (max-width: 445px) {
   .sudoku-grid {
     padding: 1rem;
+    padding-bottom: 4rem;
   }
   .sudoku-title {
     width: 18rem;
