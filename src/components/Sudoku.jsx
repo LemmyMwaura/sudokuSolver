@@ -41,7 +41,8 @@ const Sudoku = () => {
                       <input
                         type="text"
                         className="cell-input"
-                        value={grid[row][col]}
+                        value={grid[row][col] !== 0 ? grid[row][col] : ''}
+                        disabled={puzzle[row][col] !== 0}
                         readOnly
                       />
                     </td>

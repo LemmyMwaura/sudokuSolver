@@ -1,0 +1,64 @@
+.sudoku-grid {
+  background: url('../assets/images/6880419.jpg');
+  background-position: center;
+  background-size: cover;
+  object-fit: contain;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.cell-input {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+.original-cell {
+  background-color: #02242c;
+  color: rgb(250, 213, 2);
+}
+
+table {
+  border-radius: 0.3rem;
+  border-collapse: separate;
+  border: 10px solid black;
+}
+
+td {
+  padding: 0;
+}
+
+tr:nth-child(3) > td,
+tr:nth-child(6) > td {
+  border-bottom: 10px solid rgba(255, 255, 255, 0.1);
+}
+
+td:nth-child(4),
+td:nth-child(7) {
+  border-left: 10px solid rgba(255, 255, 255, 0.1);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
