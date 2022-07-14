@@ -1,5 +1,5 @@
-# Sudoku Solver Visualiser
-Sudoku Solver Visualiser. A Sudoku solver implemented using a backtracking algorithm. (visualises the backtracking)
+# Sudoku Solver Visualizer
+Sudoku Solver Visualizer. A Sudoku solver implemented using a backtracking algorithm. (visualises the backtracking)
 
 ---
 ___
@@ -10,7 +10,7 @@ ___
 ___
 ---
 ### Introduction
-Sudoku Solver Visualiser.
+Sudoku Solver Visualizer.
 
 Using a Backtracking algorithm the sudoku is solved by one by one assigning numbers to empty cells. Before assigning, it check whether it is safe (to assign). i.e that the same number is not present in the current row, current column and current 3X3 subgrid.
 

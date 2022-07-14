@@ -31,7 +31,7 @@ const Sudoku = () => {
       </div>
       <div className="left-wrapper">
         <div className="left">
-          <h4>Sudoku Visualiser</h4>
+          <h4>Sudoku Visualizer</h4>
           <h5>HOW IT WORKS</h5>
           <div className="info">
             <div className="desc">
