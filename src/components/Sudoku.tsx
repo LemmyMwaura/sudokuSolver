@@ -1,6 +1,6 @@
-import { useState } from "react"
-import { solveSudoku } from "./sudokuSolver"
-import image from "../assets/images/sudoku.png"
+import { useState } from 'react'
+import { solveSudoku } from './sudokuSolver'
+import image from '../assets/images/sudoku.png'
 
 const Sudoku = () => {
   const puzzle = [
@@ -15,8 +15,8 @@ const Sudoku = () => {
     [1, 0, 9, 0, 0, 0, 2, 0, 0],
   ]
 
-  const [grid, setGrid] = useState(puzzle)
-  const [disabled, setDisabled] = useState(false)
+  const [grid, setGrid] = useState<number[][]>(puzzle)
+  const [disabled, setDisabled] = useState<boolean>(false)
   const array = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
   const startSolve = () => {
@@ -43,9 +43,10 @@ const Sudoku = () => {
             </div>
             <div className="desc">
               After checking for safety, assign the number, and
-              <span> recursively</span> check whether this assignment leads to a solution. If the
-              assignment doesn’t lead to a solution, then try the next number
-              for the current empty cell. And if none of the numbers
+              <span> recursively</span> check whether this assignment leads to a
+              solution. If the assignment doesn’t lead to a solution, then try
+              the next number for the current empty cell. And if none of the
+              numbers
               <span> (1 to 9) </span>
               leads to a solution, <span>return false </span> and print no
               solution exists.
@@ -71,17 +72,17 @@ const Sudoku = () => {
 
         <table>
           <tbody>
-            {array.map((row, rowIndex) => (
+            {array.map((row: number, rowIndex: number) => (
               <tr key={rowIndex}>
-                {array.map((col, colIndex) => {
+                {array.map((col: number, colIndex: number) => {
                   return (
                     <td key={colIndex}>
                       <input
                         type="text"
                         className={`cell-input ${
-                          puzzle[row][col] !== 0 && "original-cell"
+                          puzzle[row][col] !== 0 && 'original-cell'
                         }`}
-                        value={grid[row][col] !== 0 ? grid[row][col] : ""}
+                        value={grid[row][col] !== 0 ? grid[row][col] : ''}
                         readOnly
                       />
                     </td>
@@ -94,7 +95,9 @@ const Sudoku = () => {
       </div>
       <div className="my-links">
         <span>By</span>
-        <a href="https://github.com/LemmyMwaura" target="_blank">Lemmy Mwaura</a>
+        <a href="https://github.com/LemmyMwaura" target="_blank">
+          Lemmy Mwaura
+        </a>
       </div>
     </div>
   )

@@ -1,8 +1,10 @@
-const animationDelay = (time) => {
+import { Dispatch } from 'react'
+
+const animationDelay = (time: number) => {
   return new Promise((resolve) => setTimeout(resolve, time))
 }
 
-const findNextEmptyCell = (grid) => {
+const findNextEmptyCell = (grid: number[][]) => {
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid.length; j++) {
       if (grid[i][j] === 0) {
@@ -14,7 +16,12 @@ const findNextEmptyCell = (grid) => {
   return false
 }
 
-const isValid = (grid, guess, row, column) => {
+const isValid = (
+  grid: number[][],
+  guess: number,
+  row: number,
+  column: number
+) => {
   for (let i = 0; i < grid.length; i++) {
     if (grid[row][i] === guess || grid[i][column] === guess) {
       return false
@@ -35,8 +42,15 @@ const isValid = (grid, guess, row, column) => {
   return true
 }
 
-const solveSudoku = async (grid, setGrid, setDisabled) => {
-  const { row, column } = findNextEmptyCell(grid)
+const solveSudoku = async (
+  grid: number[][],
+  setGrid: Dispatch<React.SetStateAction<number[][]>>,
+  setDisabled: Dispatch<React.SetStateAction<boolean>>
+) => {
+  const { row, column } = findNextEmptyCell(grid) as {
+    row: number
+    column: number
+  }
   if (row === undefined && column === undefined) {
     setDisabled(false)
     return true
