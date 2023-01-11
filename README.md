@@ -33,6 +33,10 @@ First clone the repository from Github and switch to the new directory:
     $ git clone git@github.com:LemmyMwaura/Sudoku-Solver-Visualizer.git
     $ cd Sudoku-Solver-Visualizer
 
+Run the Project
+
+    $ npm run dev
+
 
 ---
 ___
@@ -42,12 +46,5 @@ ___
 
 Licensed under the [MIT License](LISENCE)
 
----
-___
-
-## Author 
-Stephen Lemmy Mwaura, Full-Stack Dev:
-
-- 🎱 Twitter - [@lemmyMwaura](https://twitter.com/lemmyMwaura8)
 ---
 ___
