@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
-import { solveSudoku } from './sudokuSolver'
-import image from '../assets/images/sudoku.png'
+
+import { solveSudoku } from '../utils/sudokuSolver'
 
 const Sudoku = () => {
   const puzzle = [
@@ -27,7 +28,11 @@ const Sudoku = () => {
   return (
     <div className="sudoku-grid">
       <div className="title">
-        <img className="sudoku-title" src={image} alt="sudoku-title-image" />
+        <img
+          className="sudoku-title"
+          src={'/images/sudoku.png'}
+          alt="sudoku-title-image"
+        />
       </div>
       <div className="left-wrapper">
         <div className="left">
@@ -92,12 +97,6 @@ const Sudoku = () => {
             ))}
           </tbody>
         </table>
-      </div>
-      <div className="my-links">
-        <span>By</span>
-        <a href="https://github.com/LemmyMwaura" target="_blank">
-          Lemmy Mwaura
-        </a>
       </div>
     </div>
   )

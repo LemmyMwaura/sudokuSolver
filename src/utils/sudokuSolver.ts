@@ -51,6 +51,7 @@ const solveSudoku = async (
     row: number
     column: number
   }
+
   if (row === undefined && column === undefined) {
     setDisabled(false)
     return true

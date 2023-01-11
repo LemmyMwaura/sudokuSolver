@@ -5,7 +5,7 @@ Sudoku Solver Visualizer. A Sudoku solver implemented using a backtracking algor
 ___
 
 ### Screenshot
-![Website](src/assets/images/web.png)
+![Website](public/images/web.png)
 
 ___
 ---
@@ -20,7 +20,7 @@ After checking for safety, assign the number, and recursively check whether this
 ___
 ### Built with / Technologies Used
 
-- React
+- Nextjs
 
 ---
 ___
@@ -28,14 +28,24 @@ ___
 
 # Getting Started
 
-First clone the repository from Github and switch to the new directory:
+First clone the repository and switch to the new directory:
 
-    $ git clone git@github.com:LemmyMwaura/Sudoku-Solver-Visualizer.git
-    $ cd Sudoku-Solver-Visualizer
+```sh
+> git clone git@github.com:LemmyMwaura/Sudoku-Solver-Visualizer.git
+> cd Sudoku-Solver-Visualizer
+```
 
-Run the Project
+Install project dependencies:
 
-    $ npm run dev
+```sh
+> pnpm install
+```
+
+Run development server:
+
+```sh
+> pnpm dev
+```
 
 
 ---
