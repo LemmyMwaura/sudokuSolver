@@ -31,8 +31,8 @@ ___
 First clone the repository and switch to the new directory:
 
 ```sh
-> git clone git@github.com:LemmyMwaura/Sudoku-Solver-Visualizer.git
-> cd Sudoku-Solver-Visualizer
+> git clone git@github.com:LemmyMwaura/Sudoku-Solver.git
+> cd Sudoku-Solver
 ```
 
 Install project dependencies:
